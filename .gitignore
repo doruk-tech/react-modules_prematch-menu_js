@@ -1,9 +1,7 @@
 debug.log
 .idea
 .vscode
-_production
 build
-/src/styles/scss/themes/theme.scss
 node_modules/
 package-lock.json
 yarn.lock
