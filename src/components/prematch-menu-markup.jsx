@@ -1,5 +1,5 @@
-import {BranchPicker} from "@components/branch-picker.jsx";
-import {QueryWrp} from "@components/query-wrp.jsx";
+import {BranchPicker} from "./branch-picker.jsx";
+import {QueryWrp} from "./query-wrp.jsx";
 
 
 export const PrematchMenuMarkup = () => {

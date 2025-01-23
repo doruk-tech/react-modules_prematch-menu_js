@@ -1,10 +1,9 @@
 import {QueryClient, QueryClientProvider} from "react-query";
 
-import { createRoot } from "react-dom/client";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import './App.css';
-import {PrematchMenuMarkup} from "@components/prematch-menu-markup.jsx";
+import {PrematchMenuMarkup} from "./components/prematch-menu-markup.jsx";
 
 
 const queryClient = new QueryClient();

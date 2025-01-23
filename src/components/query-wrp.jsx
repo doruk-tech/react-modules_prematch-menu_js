@@ -2,7 +2,7 @@ import {useQuery} from "react-query";
 import {useParams } from 'react-router-dom';
 
 import {SportItem} from "./sport-item.jsx";
-import {apiRequest} from "@common/api/index.js";
+import {apiRequest} from "../common/api/index.js";
 
 
 const hours = (hours) =>
