@@ -4,22 +4,22 @@ import { createRoot } from "react-dom/client";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import './App.css';
-import {PrematchMenu} from "@components/prematch-menu.jsx";
+import {PrematchMenuMarkup} from "@components/prematch-menu-markup.jsx";
 
 
 const queryClient = new QueryClient();
 // const root = createRoot(document.getElementById("root"));
 
-function App() {
+function PrematchMenu() {
     return (
         <QueryClientProvider client={queryClient}>
             <BrowserRouter basename="/sport">
                 <Routes>
-                    <Route path=":branchId" element={<PrematchMenu />} />
+                    <Route path=":branchId" element={<PrematchMenuMarkup />} />
                 </Routes>
             </BrowserRouter>
         </QueryClientProvider>
     )
 }
 
-export default App;
+export default PrematchMenu;

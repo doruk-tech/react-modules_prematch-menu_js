@@ -42,7 +42,7 @@ const branchConfig = {
 export const QueryWrp = () => {
     let { branchId } = useParams();
 
-    const {data: sports} = useQuery({
+    const {data: sports, isLoading} = useQuery({
         queryKey: ['sports', branchId],
         queryFn: async () => {
             const res = await apiRequest({
@@ -60,6 +60,8 @@ export const QueryWrp = () => {
         },
         staleTime: Infinity,
     });
+
+    if (isLoading) return <div>Loading...</div>
 
     return (
         <div>
