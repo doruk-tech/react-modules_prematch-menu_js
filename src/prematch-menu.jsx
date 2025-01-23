@@ -9,12 +9,15 @@ import {PrematchMenuMarkup} from "./components/prematch-menu-markup.jsx";
 const queryClient = new QueryClient();
 // const root = createRoot(document.getElementById("root"));
 
+const Main = () => null;
+
 function PrematchMenu() {
     return (
         <QueryClientProvider client={queryClient}>
-            <BrowserRouter basename="/sport">
+            <BrowserRouter>
                 <Routes>
-                    <Route path=":branchId" element={<PrematchMenuMarkup />} />
+                    <Route path="/" element={<Main />}/>
+                    <Route path="/sport/:branchId" element={<PrematchMenuMarkup />} />
                 </Routes>
             </BrowserRouter>
         </QueryClientProvider>
