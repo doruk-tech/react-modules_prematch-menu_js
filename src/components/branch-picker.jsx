@@ -33,7 +33,7 @@ export const BranchPicker = () => {
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                     }
-                    to={`/${branch.id}`}
+                    to={`/sport/${branch.id}`}
                 >
                     {branch.label}
                 </NavLink>

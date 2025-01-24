@@ -9,7 +9,10 @@ import {PrematchMenuMarkup} from "./components/prematch-menu-markup.jsx";
 const queryClient = new QueryClient();
 // const root = createRoot(document.getElementById("root"));
 
-const Main = () => null;
+const Main = () => {
+    console.log('Nothing here')
+    return null;
+};
 
 function PrematchMenu() {
     return (
@@ -17,7 +20,9 @@ function PrematchMenu() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Main />}/>
+                    <Route path="/sport" element={<PrematchMenuMarkup />} />
                     <Route path="/sport/:branchId" element={<PrematchMenuMarkup />} />
+                    <Route path="*" element={<Main />}/>
                 </Routes>
             </BrowserRouter>
         </QueryClientProvider>

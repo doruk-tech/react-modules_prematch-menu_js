@@ -40,7 +40,7 @@ const branchConfig = {
 
 
 export const QueryWrp = () => {
-    let { branchId } = useParams();
+    let {branchId} = useParams();
 
     const {data: sports, isLoading} = useQuery({
         queryKey: ['sports', branchId],
@@ -49,7 +49,7 @@ export const QueryWrp = () => {
                     url: 'sportMenu',
                     method: 'post',
                     body: {
-                        to: branchConfig[branchId].to(),
+                        to: branchConfig[branchId]?.to(),
                     }
                 }
             );
@@ -59,14 +59,17 @@ export const QueryWrp = () => {
             return res.data;
         },
         staleTime: Infinity,
+        enabled: branchId !== undefined,
     });
+
+    if (branchId === undefined) return <div>Choose brunch</div>
 
     if (isLoading) return <div>Loading...</div>
 
     return (
         <div>
             {sports?.length ?
-                sports.map(sport => <SportItem key={sport.i} sport={sport} />)
+                sports.map(sport => <SportItem key={sport.i} sport={sport}/>)
                 : null
             }
         </div>

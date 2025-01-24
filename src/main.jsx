@@ -4,7 +4,7 @@ import './index.css'
 import PrematchMenu from './prematch-menu.jsx'
 
 createRoot(document.getElementById('root')).render(
-    <StrictMode>
+    // <StrictMode>
         <PrematchMenu/>
-    </StrictMode>,
+    // </StrictMode>,
 )
